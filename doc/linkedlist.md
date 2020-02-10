@@ -154,4 +154,34 @@ B.使用快慢指针~这个逻辑是利用龟兔赛跑的道理~文字不好表�
 
     }
 
+```  
+
+### 三、LinkedList203  
+
+- 使用虚拟头结点删除元素，没有什么难的。   
+
+
 ```
+   public ListNode removeElements(ListNode head, int val) {
+      ListNode dummyHead = new ListNode(-1);
+      dummyHead.next = head;
+
+      ListNode prev = dummyHead;
+      ListNode cur = head;
+      while (cur != null) {
+        if (cur.val == val) {
+          prev.next = cur.next;
+        } else {
+          prev = cur;
+        }
+        cur = cur.next;
+      }
+
+      return dummyHead.next;
+    }
+
+
+```  
+
+
+这种难度估计大家猜都能猜到~
