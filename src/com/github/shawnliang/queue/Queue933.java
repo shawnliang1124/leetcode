@@ -2,7 +2,6 @@ package com.github.shawnliang.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
 /**
  * @author shawnLiang
  * @github https://github.com/shawnliang1124
